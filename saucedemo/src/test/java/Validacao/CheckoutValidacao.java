@@ -1,0 +1,32 @@
+package Validacao;
+
+import org.junit.jupiter.api.Assertions;
+import org.openqa.selenium.WebDriver;
+
+import Framework.Utils.FileOperations;
+import PageObjects.CheckoutPage;
+
+public class CheckoutValidacao {
+    private WebDriver driver;
+    CheckoutPage checkoutPage;
+
+    public CheckoutValidacao(WebDriver driver) {
+        this.driver = driver;
+        this.checkoutPage = new CheckoutPage(this.driver);
+    }
+
+    public void validationForm() {
+        Assertions.assertFalse(checkoutPage.getFirstNameInput().getAttribute("value").equalsIgnoreCase(" "));
+    }
+
+    public void validationCamposForm() {
+        String name = FileOperations.getProperties("form").getProperty("name");
+        String lastName = FileOperations.getProperties("form").getProperty("lastname");
+        String cep = FileOperations.getProperties("form").getProperty("zip");
+
+        Assertions.assertEquals(name, checkoutPage.getFirstNameInput().getAttribute("value"));
+        Assertions.assertEquals(lastName, checkoutPage.getLastNameInput().getAttribute("value"));
+        Assertions.assertEquals(cep, checkoutPage.getZipCodeInput().getAttribute("value"));
+
+    }
+}

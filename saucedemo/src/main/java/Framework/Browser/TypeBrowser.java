@@ -5,6 +5,4 @@ public enum TypeBrowser {
     FIREFOX,
     EDGE,
     HEADLESS;
-
-
 }
