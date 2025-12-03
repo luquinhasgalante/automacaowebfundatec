@@ -38,7 +38,6 @@ public class CheckoutTask {
         checkoutPage.getZipCodeInput().sendKeys(cep);
         checkoutValidacao.validationCamposForm();
         checkoutPage.getContinueButton().click();
-        Thread.sleep(5000);
         genericValidacao.validationTitlePages("Checkout: Overview");
         genericValidacao.validationProduto();
     }

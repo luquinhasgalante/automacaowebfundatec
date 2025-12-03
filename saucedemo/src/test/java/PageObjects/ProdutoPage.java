@@ -15,6 +15,10 @@ public class ProdutoPage {
     public WebElement getAddToCartButton(){
         return driver.findElement(By.id("add-to-cart-test.allthethings()-t-shirt-(red)"));
     }
+    
+    public WebElement getAddToCartButton(String produto){
+        return driver.findElement(By.id(produto));
+    }
 
     public WebElement getCartButton(){
         return driver.findElement(By.className("shopping_cart_link"));

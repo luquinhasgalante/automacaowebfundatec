@@ -43,6 +43,14 @@
             <version>1.0.2</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-suite -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite</artifactId>
+            <version>6.0.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
 </project>

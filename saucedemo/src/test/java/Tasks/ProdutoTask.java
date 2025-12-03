@@ -32,4 +32,14 @@ public class ProdutoTask {
 
     }
 
+    public void selecionarProdutoCSV(String produto){
+
+        produtoPage.getAddToCartButton(produto).click();
+        produtoPage.getCartButton().click();
+        genericValidacao.validationTitlePages("Your Cart");
+        genericValidacao.validationProduto();
+        cartPage.getCheckoutButton().click();
+
+    }
+
 }

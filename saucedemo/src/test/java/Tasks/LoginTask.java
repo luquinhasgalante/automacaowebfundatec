@@ -21,6 +21,13 @@ public class LoginTask {
         loginPage.getUserNameInput().sendKeys(FileOperations.getProperties("user").getProperty("user"));
         loginPage.getPasswordInput().sendKeys(FileOperations.getProperties("user").getProperty("password"));
         loginPage.getLoginButton().click();
+    } 
+    
+    public void efetuarLoginCSV(String user, String password){
+
+        loginPage.getUserNameInput().sendKeys(user);
+        loginPage.getPasswordInput().sendKeys(password);
+        loginPage.getLoginButton().click();
     }
 
 
