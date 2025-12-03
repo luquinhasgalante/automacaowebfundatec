@@ -1,5 +1,6 @@
 package Framework;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 
@@ -14,7 +15,7 @@ public class TestBase extends DriverManager {
 
     public static WebDriver getDriverManager(){
 
-        driver = getDriver(TypeBrowser.EDGE);
+        driver = getDriver(TypeBrowser.CHROME);
         return driver;
     }
 
@@ -24,5 +25,11 @@ public class TestBase extends DriverManager {
         getDriverManager().get(URL);
     }
 
+    @AfterEach
+    public void finish(){
+
+        fecharDriver();
+
+    }
 
 }

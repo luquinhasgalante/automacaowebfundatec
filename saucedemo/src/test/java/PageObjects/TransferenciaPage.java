@@ -11,6 +11,10 @@ public class TransferenciaPage {
         this.driver = driver;
     }
 
+    public WebElement getVoltarButton() {
+        return driver.findElement(By.id("btnBack"));
+    }
+
     public WebElement getNumeroContaInput() {
         return driver.findElement(By.name("accountNumber"));
     }

@@ -24,12 +24,15 @@ public class TransferenciaTask {
         Thread.sleep(100);
         page.getNumeroContaInput().sendKeys(FileOperations.getProperties("user").getProperty("numero"));
         page.getDigitoContaInput().sendKeys(FileOperations.getProperties("user").getProperty("digito"));
-        page.getValorTransferencia().sendKeys("500");
+
+        String valorTransferencia = FileOperations.getProperties("form").getProperty("valor");
+
+        page.getValorTransferencia().sendKeys(valorTransferencia);
         page.getDescricaoInput().sendKeys("Vai um pix aí");
         page.getTransferirButton().click();
         
         waits.loadElement(page.fecharButton());
         page.fecharButton().click();
-        page.sairButton().click();
+        page.getVoltarButton().click();
     }
 }

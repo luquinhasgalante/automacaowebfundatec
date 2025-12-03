@@ -33,7 +33,12 @@ public class HomeTask {
     public void sair() throws InterruptedException {
         waits.loadElement(page.getSairButton());
         Thread.sleep(100);
-
+        
         page.getSairButton().click();
+    }
+    
+    public void acessarExtrato() throws InterruptedException {
+        waits.loadElement(page.getExtratoButton());
+        page.getExtratoButton().click();
     }
 }

@@ -22,36 +22,6 @@ public class CadastroTask {
         cadastroValidacao = new CadastroValidacao(driver);
         fakers = new FakersGeneration();
     }
-
-    public void realizarCadastro() throws InterruptedException {
-        page.getRegistrarButton().click();
-
-        Thread.sleep(500);
-
-        String email = fakers.getEmail();
-        String senha = fakers.getPassword();
-        String nome = fakers.getFirstName();
-
-        FileOperations.setProperties("user", "email", email);
-        FileOperations.setProperties("user", "password", senha);
-        FileOperations.setProperties("user", "name", nome);
-
-        
-        page.getEmailInput().clear();
-        page.getNomeInput().clear();
-        page.getPasswordInput().clear();
-        page.getPasswordConfirmationInput().clear();
-
-        page.getEmailInput().sendKeys(email);
-        page.getNomeInput().sendKeys(nome);
-        page.getPasswordInput().sendKeys(senha);
-        page.getPasswordConfirmationInput().sendKeys(senha);
-        
-        page.getCadastrarButton().click();
-        
-        waits.loadElement(page.getFecharButton());
-        page.getFecharButton().click(); 
-    }
     
     public void realizarCadastroComSaldo() throws InterruptedException {
         page.getRegistrarButton().click();
