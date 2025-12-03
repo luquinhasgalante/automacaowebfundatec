@@ -1,9 +1,9 @@
 package Validacao;
 
-import PageObjects.GenericPage;
-import PageObjects.ProdutoPage;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
+
+import PageObjects.GenericPage;
 
 public class GenericValidacao {
 
@@ -25,17 +25,5 @@ public class GenericValidacao {
             e.getMessage();
         }
     }
-
-    public void validationProduto(){
-            try{
-                String labelProduto = genericPage.getTextProduto().getText();
-                Assertions.assertEquals("Test.allTheThings() T-Shirt (Red)",labelProduto);
-            }catch (Exception e){
-                e.getMessage();
-            }
-        }
-
-
-
-    }
+}
 

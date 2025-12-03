@@ -1,12 +1,12 @@
 package Framework.Utils;
 
-import com.github.javafaker.Faker;
-
 import java.util.Locale;
+
+import com.github.javafaker.Faker;
 
 public class FakersGeneration {
 
-    private Faker faker;
+    private final Faker faker;
     private String firstName;
     private String lastName;
     private String zipCode;
@@ -40,5 +40,9 @@ public class FakersGeneration {
 
     public String getEmail() {
         return faker.internet().emailAddress();
+    }
+
+    public String getPassword() {
+        return faker.internet().password();
     }
 }

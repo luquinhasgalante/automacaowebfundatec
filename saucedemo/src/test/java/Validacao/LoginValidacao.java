@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import PageObjects.LoginPage;
 
 public class LoginValidacao {
-    private WebDriver driver;
-    private LoginPage page;
+    private final WebDriver driver;
+    private final LoginPage page;
 
     public LoginValidacao(WebDriver driver) {
         this.driver = driver;

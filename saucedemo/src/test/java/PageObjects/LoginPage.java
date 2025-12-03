@@ -6,28 +6,25 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public LoginPage(WebDriver driver) {
 
         this.driver = driver;
     }
 
-    public WebElement getUserNameInput(){
+    public WebElement getEmailInput(){
 
-       /* WebElement name = driver.findElement(By.id("user-name"));
-        return name; */
-
-        return driver.findElement(By.id("user-name"));
+        return driver.findElement(By.name("email"));
     }
 
     public WebElement getPasswordInput(){
 
-        return driver.findElement(By.id("password"));
+        return driver.findElement(By.name("password"));
     }
-
+    
     public WebElement getLoginButton(){
 
-        return driver.findElement(By.id("login-button"));
+        return driver.findElement(By.cssSelector(".style__ContainerButton-sc-1wsixal-0.otUnI.button__child"));
     }
 }

@@ -1,10 +1,4 @@
-PageObjects\LoginPage.class
-Tasks\ProdutoTask.class
 Validacao\GenericValidacao.class
-TestCases\RealizarCompraSucessoTest.class
 PageObjects\GenericPage.class
-PageObjects\CheckoutPage.class
-PageObjects\CartPage.class
-PageObjects\ProdutoPage.class
-PageObjects\FinishPage.class
+PageObjects\LoginPage.class
 Tasks\LoginTask.class
