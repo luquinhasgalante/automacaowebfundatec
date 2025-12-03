@@ -34,4 +34,8 @@ public class TransferenciaPage {
     public WebElement fecharButton() {
         return driver.findElement(By.id("btnCloseModal"));
     }
+
+    public WebElement sairButton() {
+        return driver.findElement(By.id("btnExit"));
+    }
 }

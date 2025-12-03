@@ -30,5 +30,6 @@ public class TransferenciaTask {
         
         waits.loadElement(page.fecharButton());
         page.fecharButton().click();
+        page.sairButton().click();
     }
 }

@@ -29,4 +29,11 @@ public class HomeTask {
         page.getTransferenciaButton().click();
 
     }
+
+    public void sair() throws InterruptedException {
+        waits.loadElement(page.getSairButton());
+        Thread.sleep(100);
+
+        page.getSairButton().click();
+    }
 }

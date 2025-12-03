@@ -19,7 +19,17 @@ public class LoginTask {
         homePage = new HomePage(driver);
     }
 
-    public void efetuarLogin() throws InterruptedException{
+    public void efetuarLoginRemetente() throws InterruptedException{
+
+        loginPage.getEmailInput().sendKeys(FileOperations.getProperties("user").getProperty("email"));
+        loginPage.getPasswordInput().sendKeys(FileOperations.getProperties("user").getProperty("password"));
+        loginPage.getLoginButton().click();
+
+        Thread.sleep(100);
+    } 
+
+    
+    public void efetuarLoginDestinatario() throws InterruptedException{
 
         loginPage.getEmailInput().sendKeys(FileOperations.getProperties("user").getProperty("email"));
         loginPage.getPasswordInput().sendKeys(FileOperations.getProperties("user").getProperty("password"));

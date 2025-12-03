@@ -19,7 +19,7 @@ public class RealizarCadastroSemSaldoSucesso extends TestBase {
 
         try {
             cadastroTask.realizarCadastro();
-            loginTask.efetuarLogin();
+            loginTask.efetuarLoginRemetente();
 
         }catch (Exception e){
             e.getMessage();

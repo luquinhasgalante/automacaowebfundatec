@@ -22,10 +22,15 @@ public class RealizarCadastroComSaldoSucesso extends TestBase {
     public void realizarCadastro() {
 
         try {
+            cadastroTask.realizarCadastro();
+            loginTask.efetuarLoginDestinatario();
+            homeTask.sair();
+            
             cadastroTask.realizarCadastroComSaldo();
-            loginTask.efetuarLogin();
+            loginTask.efetuarLoginRemetente();
             homeTask.comecarTransferencia();
             transferenciaTask.realizarTransferência();
+            
 
         }catch (Exception e){
             e.getMessage();
