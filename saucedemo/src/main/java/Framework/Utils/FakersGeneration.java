@@ -45,4 +45,8 @@ public class FakersGeneration {
     public String getPassword() {
         return faker.internet().password();
     }
+    
+    public String getValores() {
+        return faker.random().nextInt(1, 1000).toString();
+    }
 }

@@ -25,7 +25,10 @@ public class TransferenciaTask {
         page.getNumeroContaInput().sendKeys(FileOperations.getProperties("user").getProperty("numero"));
         page.getDigitoContaInput().sendKeys(FileOperations.getProperties("user").getProperty("digito"));
 
-        String valorTransferencia = FileOperations.getProperties("form").getProperty("valor");
+        
+
+        String valorTransferencia = faker.getValores();
+        FileOperations.setProperties("form", "valor", valorTransferencia);
 
         page.getValorTransferencia().sendKeys(valorTransferencia);
         page.getDescricaoInput().sendKeys("Vai um pix aí");

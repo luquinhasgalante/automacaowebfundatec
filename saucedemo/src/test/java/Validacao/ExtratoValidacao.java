@@ -17,7 +17,13 @@ public class ExtratoValidacao {
 
     public void validationValorExtrato() {
         try {
-            Assertions.assertEquals(FileOperations.getProperties("form").getProperty("valor"), page.getValorTransferencia().getText());
+            String valor = page.getValorTransferencia().getText();
+            valor = valor.replace("R$", "");
+            valor = valor.replace(",00", "");
+            valor = valor.replace(".", "");
+            valor = valor.replace("-", "");
+            valor = valor.replace(" ", "");
+            Assertions.assertEquals(FileOperations.getProperties("form").getProperty("valor"), valor);
         }catch(Exception e) {
             e.getMessage();
         }

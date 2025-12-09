@@ -22,7 +22,7 @@ public class RealizarTransferenciaBancariaSucesso extends TestBase {
     
 
     @Test
-    public void transferenciBancaria() {
+    public void transferenciaBancaria() {
 
         try {
             cadastroTask.realizarCadastroComSaldo();

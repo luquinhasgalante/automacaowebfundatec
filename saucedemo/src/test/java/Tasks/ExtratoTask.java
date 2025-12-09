@@ -17,9 +17,9 @@ public class ExtratoTask {
     }
 
     public void checarExtrato() throws InterruptedException {
+        Thread.sleep(100);
         extratoValidacao.validationValorExtrato();
         page.getSairButton().click();
-        
         Thread.sleep(1000);
     }
 
