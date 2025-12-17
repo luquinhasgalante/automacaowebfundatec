@@ -22,5 +22,4 @@ public class ExtratoTask {
         page.getSairButton().click();
         Thread.sleep(1000);
     }
-
 }

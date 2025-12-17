@@ -22,5 +22,4 @@ public class ExtratoPage {
     public WebElement getValorTransferencia() {
         return driver.findElement(By.xpath("/html/body/div/div/div[3]/div/div[2]/div[2]/div[2]/p[2]"));
     }
-
 }
