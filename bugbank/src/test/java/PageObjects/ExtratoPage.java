@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Framework.Utils.FileOperations;
+
 public class ExtratoPage {
     private final WebDriver driver;
 
@@ -12,14 +14,14 @@ public class ExtratoPage {
     }
 
     public WebElement getVoltarButton() {
-        return driver.findElement(By.id("btnBack"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-voltar")));
     }
 
     public WebElement getSairButton() {
-        return driver.findElement(By.id("btnExit"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-sair")));
     }
 
     public WebElement getValorTransferencia() {
-        return driver.findElement(By.xpath("/html/body/div/div/div[3]/div/div[2]/div[2]/div[2]/p[2]"));
+        return driver.findElement(By.xpath(FileOperations.getProperties("form").getProperty("div-transferencia-valor")));
     }
 }

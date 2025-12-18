@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Framework.Utils.FileOperations;
+
 public class HomePage {
     WebDriver driver;
 
@@ -12,7 +14,7 @@ public class HomePage {
     }
 
     public WebElement getSairButton() {
-        return driver.findElement(By.id("btnExit"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-sair")));
     }
 
     public WebElement getTransferenciaButton() {
@@ -20,22 +22,22 @@ public class HomePage {
     }
 
     public WebElement getPagamentosButton() {
-        return driver.findElement(By.id("btn-PAGAMENTOS"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-pagamentos")));
     }
 
     public WebElement getExtratoButton() {
-        return driver.findElement(By.id("btn-EXTRATO"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-extrato")));
     }
 
     public WebElement getSaqueButton() {
-        return driver.findElement(By.id("btn-SAQUE"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-saque")));
     }
 
     public WebElement getHomeTextLabel() {
-        return driver.findElement(By.className("home__Text-sc-1auj767-9"));
+        return driver.findElement(By.className(FileOperations.getProperties("form").getProperty("home-title")));
     }
 
     public WebElement getNumeroDigitoConta() {
-        return driver.findElement(By.xpath("//p[@id='textAccountNumber']/span"));
+        return driver.findElement(By.xpath(FileOperations.getProperties("form").getProperty("label-digito")));
     }
 }

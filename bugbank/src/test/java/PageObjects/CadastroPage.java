@@ -14,30 +14,30 @@ public class CadastroPage {
     }
     
     public WebElement getRegistrarButton() {
-        return driver.findElement(By.cssSelector(".style__ContainerButton-sc-1wsixal-0.ihdmxA.button__child"));
+        return driver.findElement(By.cssSelector(FileOperations.getProperties("form").getProperty("button-registrar")));
     }
 
     public WebElement getEmailInput() {
-        return driver.findElement(By.xpath("//div[@class='card__register']//input[@name='email']"));
+        return driver.findElement(By.xpath(FileOperations.getProperties("form").getProperty("input-email")));
     }
 
     public WebElement getNomeInput() {
-        return driver.findElement(By.name("name"));
+        return driver.findElement(By.name(FileOperations.getProperties("form").getProperty("input-nome")));
     }
 
     public WebElement getPasswordInput(){
 
-        return driver.findElement(By.xpath("//div[@class='card__register']//input[@name='password']"));
+        return driver.findElement(By.xpath(FileOperations.getProperties("form").getProperty("input-senha")));
     }
 
     
     public WebElement getPasswordConfirmationInput(){
 
-        return driver.findElement(By.name("passwordConfirmation"));
+        return driver.findElement(By.name(FileOperations.getProperties("form").getProperty("input-senha-confirmacao")));
     }
 
     public WebElement getCadastrarButton() {
-        return driver.findElement(By.cssSelector(".style__ContainerButton-sc-1wsixal-0.CMabB.button__child"));
+        return driver.findElement(By.cssSelector(FileOperations.getProperties("form").getProperty("button-cadastrar")));
     }
 
     public WebElement getSaldoButton() {
@@ -45,6 +45,6 @@ public class CadastroPage {
     }
 
     public WebElement getFecharButton() {
-        return driver.findElement(By.id("btnCloseModal"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-fechar")));
     }
 }

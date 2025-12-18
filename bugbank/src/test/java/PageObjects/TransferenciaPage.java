@@ -1,8 +1,12 @@
 package PageObjects;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import Framework.Utils.FileOperations;
 
 public class TransferenciaPage {
     private final WebDriver driver;
@@ -12,34 +16,34 @@ public class TransferenciaPage {
     }
 
     public WebElement getVoltarButton() {
-        return driver.findElement(By.id("btnBack"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-voltar")));
     }
 
     public WebElement getNumeroContaInput() {
-        return driver.findElement(By.name("accountNumber"));
+        return driver.findElement(By.name(FileOperations.getProperties("form").getProperty("input-numero")));
     }
 
     public WebElement getDigitoContaInput() {
-        return driver.findElement(By.name("digit"));
+        return driver.findElement(By.name(FileOperations.getProperties("form").getProperty("input-digito")));
     }
 
     public WebElement getValorTransferencia() {
-        return driver.findElement(By.name("transferValue"));
+        return driver.findElement(By.name(FileOperations.getProperties("form").getProperty("input-valor-transferencia")));
     }
 
     public WebElement getDescricaoInput() {
-        return driver.findElement(By.name("description"));
+        return driver.findElement(By.name(FileOperations.getProperties("form").getProperty("input-descricao")));
     }
 
     public WebElement getTransferirButton() {
-        return driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[3]/form/button"));
+        return driver.findElement(By.xpath(FileOperations.getProperties("form").getProperty("button-transferir")));
     }
 
     public WebElement fecharButton() {
-        return driver.findElement(By.id("btnCloseModal"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-fechar")));
     }
 
     public WebElement sairButton() {
-        return driver.findElement(By.id("btnExit"));
+        return driver.findElement(By.id(FileOperations.getProperties("form").getProperty("button-sair")));
     }
 }

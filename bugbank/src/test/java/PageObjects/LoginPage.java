@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Framework.Utils.FileOperations;
+
 public class LoginPage {
 
     private final WebDriver driver;
@@ -14,16 +16,16 @@ public class LoginPage {
     }
 
     public WebElement getEmailInput() {
-        return driver.findElement(By.name("email"));
+        return driver.findElement(By.name(FileOperations.getProperties("form").getProperty("input-email-login")));
     }
 
     public WebElement getPasswordInput(){
 
-        return driver.findElement(By.name("password"));
+        return driver.findElement(By.name(FileOperations.getProperties("form").getProperty("input-senha-login")));
     }
     
     public WebElement getLoginButton(){
 
-        return driver.findElement(By.cssSelector(".style__ContainerButton-sc-1wsixal-0.otUnI.button__child"));
+        return driver.findElement(By.cssSelector(FileOperations.getProperties("form").getProperty("button-login")));
     }
 }
