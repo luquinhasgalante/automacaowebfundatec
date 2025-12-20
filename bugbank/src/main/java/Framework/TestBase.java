@@ -15,7 +15,7 @@ public class TestBase extends DriverManager {
 
     public static WebDriver getDriverManager(){
 
-        driver = getDriver(TypeBrowser.EDGE);
+        driver = getDriver(TypeBrowser.CHROME);
         return driver;
     }
 
